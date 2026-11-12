@@ -3,8 +3,8 @@
 class Realuptime < Formula
   desc "Command-line client for the RealUptime REST API and public outage endpoint"
   homepage "https://realuptime.io/docs/cli"
-  url "https://github.com/RealUptimeHQ/realuptime-cli/releases/download/cli-0.2.0/realuptime-cli-0.2.0.tgz"
-  sha256 "ec903774cbc63e6031b525bdba8c2174de8ad42200fa475249259ff11bed96b5"
+  url "https://github.com/RealUptimeHQ/realuptime-cli/releases/download/cli-0.3.1/realuptime-cli-0.3.1.tgz"
+  sha256 "8e77a71196e6f11896f3d3e48b21f5183bc1555cc4c611b83a3b078e62d60604"
   license "MIT"
 
   depends_on "node"
@@ -18,7 +18,7 @@ class Realuptime < Formula
   end
 
   test do
-    assert_equal "0.2.0", shell_output("#{bin}/realuptime --version").strip
+    assert_equal "0.3.1", shell_output("#{bin}/realuptime --version").strip
     assert_match "realuptime checks list", shell_output("#{bin}/realuptime help")
   end
 end
